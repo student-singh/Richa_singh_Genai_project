@@ -1,0 +1,25 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Informal to Formal Converter</title>
+</head>
+<body>
+    <h2>Informal MSG to Formal MSG</h2>
+
+    <form action="/predict" method="post">
+        <label for="inputText">Input:</label><br>
+        <textarea name="inputText" rows="4" cols="50" placeholder="Enter informal message"></textarea><br><br>
+        
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if output %}
+        <h3>Output:</h3>
+        <div style="border:1px solid #000; padding:10px;">
+            {{ output }}
+        </div>
+    {% endif %}
+</body>
+</html>
